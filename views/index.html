@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+
+<head>
+    <title>AngularJS: UI-Router Quick Start</title>
+    <!-- Bootstrap CSS -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body ng-controller="TravController" ng-model="isLoggedIn" class="container">
+
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" ui-sref="init">Traverger</a>
+      <a class="brand" style="float: right;">{{userNameRef}}</a>
+      
+      <ul class="nav" style="float: right;">
+        <li ng-show=false><a ui-sref="home">Home</a></li>
+        <li ng-show=false><a ui-sref="list">List</a></li> 
+        <li ng-show="!isLoggedIn"><a ui-sref="login">Login</a></li>
+        <li ng-show="!isLoggedIn"><a ui-sref="signup">Signup</a></li>   
+        <li ng-show="isLoggedIn"><a ui-sref="logout">Logout</a></li>        
+      </ul>
+      
+    </div>
+  </div>
+  <div>This is index page</div>  
+  <div ui-view></div>
+  <!-- <div class="row">
+    <div class="span6">
+      <div class="well" ui-view="viewA"></div>        
+    </div>
+    <div class="span6">
+      <div class="well" ui-view="viewB"></div>        
+    </div>
+  </div>   -->       
+  
+  <!-- Angular -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
+  <!-- UI-Router -->
+  <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+  
+  <script src="app.js"></script>
+  
+  <!-- App Script -->
+  
+</body>
+
+</html>

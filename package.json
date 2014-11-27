@@ -1,0 +1,20 @@
+{
+  "name": "session-node-demo",
+  "version": "0.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "express": "4.8.3",    
+    "body-parser": "1.6.3",
+    "mongodb": "1.4.8", 
+	"session-manager": "0.1.0"
+  }, 
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "grunt test",
+    "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update"
+  },
+  "private": true
+}

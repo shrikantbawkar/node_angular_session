@@ -1,0 +1,16 @@
+<div>{{itemName}}</div>
+<br>
+<div>{{ajaxData | json }}</div>
+<br>
+<div>{{queryData | json }}</div>
+<br>
+<input type="text" ng-model="txtRef"></input>
+<br>
+<input type="button" ng-click="changeDBData()" value="Set DB Data (update)"></input>
+<input type="button" ng-click="deleteDBData()" value="Delete All DB Data (delete)"></input>
+<input type="button" ng-click="setDummyDBData()" value="Set Dummy DB Data (insert)"></input>
+<input type="button" ng-click="findDummyDBData()" value="find DB Data (query)"></input>
+<input type="button" ng-click="refreshDBData()" value="refresh"></input>
+<br>
+<br>
+<img ng-src="img/{{itemName}}.jpg">

@@ -1,0 +1,16 @@
+<h1>This is list page</h1>
+
+<div>
+	<ul>
+		<li ng-repeat="item in imgList">
+			<a ng-click="itemClicked(item)" 
+				ng-class="{active: item.selected}"
+				ng-href="#/list/{{ item.name }}">{{item.name}}</a>	</li>	
+	</ul>
+
+	<br>
+	<br>
+
+	<div ui-view></div>
+
+</div>
